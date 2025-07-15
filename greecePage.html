@@ -28,27 +28,6 @@
         </div>
     </header>
 
-    <script>
-        // Динамически ставим индикатор для текущей страницы
-        const current = window.location.pathname.split('/').pop();
-        document.querySelectorAll('.header-nav .nav-link').forEach(link => {
-            if (link.getAttribute('href').startsWith('#')) return;
-            const href = link.getAttribute('href').split('/').pop();
-            if (href === current || (href === 'index.html' && (current === '' || current === 'index.html'))) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-        // Для якоря (#contacts) добавить active только при клике
-        document.querySelectorAll('.header-nav .nav-link[href^="#"]').forEach(link => {
-            link.addEventListener('click', function () {
-                document.querySelectorAll('.header-nav .nav-link').forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    </script>
-
     <main>
         <div class="greece-section">
             <div class="greece-content">
@@ -89,5 +68,24 @@
         </div>
     </footer>
 </body>
+
+<script>
+    const current = window.location.pathname.split('/').pop();
+    document.querySelectorAll('.header-nav .nav-link').forEach(link => {
+        if (link.getAttribute('href').startsWith('#')) return;
+        const href = link.getAttribute('href').split('/').pop();
+        if (href === current || (href === 'index.html' && (current === '' || current === 'index.html'))) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+    document.querySelectorAll('.header-nav .nav-link[href^="#"]').forEach(link => {
+        link.addEventListener('click', function () {
+            document.querySelectorAll('.header-nav .nav-link').forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+</script>
 
 </html>

@@ -29,25 +29,6 @@
         </div>
     </header>
 
-    <script>
-        const current = window.location.pathname.split('/').pop();
-        document.querySelectorAll('.header-nav .nav-link').forEach(link => {
-            if (link.getAttribute('href').startsWith('#')) return;
-            const href = link.getAttribute('href').split('/').pop();
-            if (href === current || (href === 'index.html' && (current === '' || current === 'index.html'))) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-        document.querySelectorAll('.header-nav .nav-link[href^="#"]').forEach(link => {
-            link.addEventListener('click', function () {
-                document.querySelectorAll('.header-nav .nav-link').forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    </script>
-
     <div class="container">
         <h1>Ласкаво просимо на наш сайт!</h1>
         <p>
@@ -160,6 +141,25 @@
             .catch(() => {
                 alert("Сталася помилка при відправці!");
             });
+    });
+</script>
+
+<script>
+    const current = window.location.pathname.split('/').pop();
+    document.querySelectorAll('.header-nav .nav-link').forEach(link => {
+        if (link.getAttribute('href').startsWith('#')) return;
+        const href = link.getAttribute('href').split('/').pop();
+        if (href === current || (href === 'index.html' && (current === '' || current === 'index.html'))) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+    document.querySelectorAll('.header-nav .nav-link[href^="#"]').forEach(link => {
+        link.addEventListener('click', function () {
+            document.querySelectorAll('.header-nav .nav-link').forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
     });
 </script>
 
