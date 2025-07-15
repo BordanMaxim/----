@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catalan Travel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo">
+                <span class="logo-img">
+                    <img src="./src/logo_catalan.png" alt="logo" style="height:38px;">
+                </span>
+                <span class="logo-text" style="margin-left:10px;">
+                    <img src="./src/catalan_text.svg" style="height:28px;">
+                </span>
+            </a>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link active">Головна</a>
+                <a href="greecePage.html" class="nav-link with-arrow">Греція</a>
+                <a href="stambulPage.html" class="nav-link with-arrow">Стамбул</a>
+                <a href="#contacts" class="nav-link">Контакти</a>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        document.querySelectorAll('.header-nav .nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                // Только якорь (#contacts) не перехватываем, остальное — пусть работает как ссылка!
+                if (this.getAttribute('href').startsWith('#')) {
+                    document.querySelectorAll('.header-nav .nav-link').forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                } else {
+                }
+            });
+        });
+    </script>
+
+
+    <div class="container">
+        <h1>Ласкаво просимо на наш сайт!</h1>
+        <p>
+            Тут ви можете дізнатися більше про наші послуги та компанію. Ми пропонуємо сучасні рішення для вашого
+            бізнесу та завжди раді новим клієнтам.
+        </p>
+
+        <!-- Блок карток -->
+        <div class="cards-row">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+                    alt="Фотографія 1">
+                <h3>Варіант 1</h3>
+                <p>Опис першого варіанту. Тут може бути короткий опис послуги або пропозиції.</p>
+                <button>Обрати</button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                    alt="Фотографія 2">
+                <h3>Варіант 2</h3>
+                <p>Опис другого варіанту. Тут може бути короткий опис послуги або пропозиції.</p>
+                <button>Обрати</button>
+            </div>
+        </div>
+        <!-- Кінець блоку карток -->
+
+        <div class="social-icons">
+            <a href="viber://chat?number=%2B380984284284" class="social-icon" title="Viber" target="_blank"
+                rel="noopener">
+                <img src="./src/icons/viber.png" alt="Viber">
+            </a>
+            <a href="https://wa.me/380984284284" class="social-icon" title="WhatsApp" target="_blank" rel="noopener">
+                <img src="./src/icons/WhatsApp.png" alt="WhatsApp">
+            </a>
+            <a href="https://t.me/+380984284284" class="social-icon" title="Telegram" target="_blank" rel="noopener">
+                <img src="./src/icons/telegram.png" alt="Telegram">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61578107841399" class="social-icon" title="Telegram"
+                target="_blank" rel="noopener">
+                <img src="./src/icons/facebook.png" alt="facebook">
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-contacts">
+            <a href="tel:+380984284284" class="footer-icon" title="Подзвонити">
+                📱 +380984284284
+            </a>
+            <a href="tel:+380914817574" class="footer-icon" title="Подзвонити">
+                ☎️ +380914817574
+            </a>
+            <a href="mailto:catalan.ua.md@gmail.com" class="footer-icon" title="Email">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="Email" />
+                catalan.ua.md@gmail.com
+            </a>
+        </div>
+        <div>
+            © 2025 Catalan Travel. Всі права захищені.
+        </div>
+    </footer>
+
+</body>
+
+</html>
