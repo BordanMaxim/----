@@ -79,7 +79,8 @@
                 <input type="text" name="surname" placeholder="Прізвище" required>
             </div>
             <div class="form-row">
-                <input type="tel" name="phone" placeholder="+380991112233" required pattern="\+?\d{10,15}">
+                <input type="tel" name="phone" placeholder="+380991112233" required pattern="\+?\d{10,15}"
+                    value="+380984284284">
                 <input type="email" name="email" placeholder="Email" required>
             </div>
             <div class="form-row">
@@ -135,28 +136,37 @@
 <script>
     document.getElementById('tourForm').addEventListener('submit', function (e) {
         e.preventDefault();
-        const form = this;
-        const formData = new FormData(form);
+        const formData = new URLSearchParams(new FormData(this));
 
-        fetch('https://script.google.com/macros/s/AKfycbyxRYRkyCEhXp0syohwgXKLRr2VyXLLY6P6gm3sdMcKYuu8tDSRrLfG7o36efJR6-rP/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbwBw8MooBWKB82TJZkMXxQGCe8g-N8gUEyDw67L6hvlMiHl5OcVDwWgbtuUL7WRPOnV/exec', {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
             body: formData
         })
+            .then(res => res.json())
             .then(res => {
-                if (res.ok) {
+                console.log('[Ответ]', res);
+                if (res.result === 'success') {
                     document.getElementById('form-success').style.display = "block";
-                    form.reset();
+                    this.reset();
                     setTimeout(() => {
                         document.getElementById('form-success').style.display = "none";
                     }, 3000);
                 } else {
-                    alert("Сталася помилка при відправці!");
+                    alert("Помилка: " + JSON.stringify(res.message));
                 }
             })
-            .catch(() => {
+            .catch(err => {
+                console.error('[Fetch error]', err);
                 alert("Сталася помилка при відправці!");
             });
     });
 </script>
 
 </html>
+
+<!-- AKfycbwBw8MooBWKB82TJZkMXxQGCe8g-N8gUEyDw67L6hvlMiHl5OcVDwWgbtuUL7WRPOnV -->
+
+<!-- https://script.google.com/macros/s/AKfycbwBw8MooBWKB82TJZkMXxQGCe8g-N8gUEyDw67L6hvlMiHl5OcVDwWgbtuUL7WRPOnV/exec -->
