@@ -30,7 +30,6 @@
     </header>
 
     <script>
-        // Динамически ставим индикатор для текущей страницы
         const current = window.location.pathname.split('/').pop();
         document.querySelectorAll('.header-nav .nav-link').forEach(link => {
             if (link.getAttribute('href').startsWith('#')) return;
@@ -41,7 +40,6 @@
                 link.classList.remove('active');
             }
         });
-        // Для якоря (#contacts) добавить active только при клике
         document.querySelectorAll('.header-nav .nav-link[href^="#"]').forEach(link => {
             link.addEventListener('click', function () {
                 document.querySelectorAll('.header-nav .nav-link').forEach(l => l.classList.remove('active'));
@@ -73,6 +71,28 @@
             </div>
         </div>
         <!-- Кінець блоку карток -->
+
+        <form class="contact-form" id="tourForm" autocomplete="off">
+            <h2>Залишити заявку</h2>
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Ім'я" required>
+                <input type="text" name="surname" placeholder="Прізвище" required>
+            </div>
+            <div class="form-row">
+                <input type="tel" name="phone" placeholder="+380991112233" required pattern="\+?\d{10,15}">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-row">
+                <select name="tour" required>
+                    <option value="">Оберіть тур</option>
+                    <option value="Греція">Греція</option>
+                    <option value="Істамбул">Істамбул</option>
+                </select>
+            </div>
+            <button type="submit">Відправити</button>
+            <div id="form-success" style="display:none;color:#2e7d32;padding:10px 0;text-align:center;">Заявку
+                надіслано!</div>
+        </form>
 
         <div class="social-icons">
             <a href="viber://chat?number=%2B380984284284" class="social-icon" title="Viber" target="_blank"
@@ -111,5 +131,32 @@
     </footer>
 
 </body>
+
+<script>
+    document.getElementById('tourForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const form = this;
+        const formData = new FormData(form);
+
+        fetch('https://script.google.com/macros/s/AKfycbyxRYRkyCEhXp0syohwgXKLRr2VyXLLY6P6gm3sdMcKYuu8tDSRrLfG7o36efJR6-rP/exec', {
+            method: 'POST',
+            body: formData
+        })
+            .then(res => {
+                if (res.ok) {
+                    document.getElementById('form-success').style.display = "block";
+                    form.reset();
+                    setTimeout(() => {
+                        document.getElementById('form-success').style.display = "none";
+                    }, 3000);
+                } else {
+                    alert("Сталася помилка при відправці!");
+                }
+            })
+            .catch(() => {
+                alert("Сталася помилка при відправці!");
+            });
+    });
+</script>
 
 </html>
