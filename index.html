@@ -29,18 +29,25 @@
     </header>
 
     <script>
+        // Динамически ставим индикатор для текущей страницы
+        const current = window.location.pathname.split('/').pop();
         document.querySelectorAll('.header-nav .nav-link').forEach(link => {
-            link.addEventListener('click', function (e) {
-                // Только якорь (#contacts) не перехватываем, остальное — пусть работает как ссылка!
-                if (this.getAttribute('href').startsWith('#')) {
-                    document.querySelectorAll('.header-nav .nav-link').forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-                } else {
-                }
+            if (link.getAttribute('href').startsWith('#')) return;
+            const href = link.getAttribute('href').split('/').pop();
+            if (href === current || (href === 'index.html' && (current === '' || current === 'index.html'))) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+        // Для якоря (#contacts) добавить active только при клике
+        document.querySelectorAll('.header-nav .nav-link[href^="#"]').forEach(link => {
+            link.addEventListener('click', function () {
+                document.querySelectorAll('.header-nav .nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
             });
         });
     </script>
-
 
     <div class="container">
         <h1>Ласкаво просимо на наш сайт!</h1>

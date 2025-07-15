@@ -76,7 +76,7 @@
     content: '';
     display: block;
     margin: 6px auto 0 auto;
-    width: 42px;
+    width: 100%;
     height: 4px;
     border-radius: 3px 3px 0 0;
     background: #008da7;
@@ -86,7 +86,6 @@
 }
 
 .nav-link.with-arrow {
-    padding-right: 17px;
     position: relative;
 }
 

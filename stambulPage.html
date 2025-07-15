@@ -28,6 +28,27 @@
         </div>
     </header>
 
+    <script>
+        // Динамически ставим индикатор для текущей страницы
+        const current = window.location.pathname.split('/').pop();
+        document.querySelectorAll('.header-nav .nav-link').forEach(link => {
+            if (link.getAttribute('href').startsWith('#')) return;
+            const href = link.getAttribute('href').split('/').pop();
+            if (href === current || (href === 'index.html' && (current === '' || current === 'index.html'))) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+        // Для якоря (#contacts) добавить active только при клике
+        document.querySelectorAll('.header-nav .nav-link[href^="#"]').forEach(link => {
+            link.addEventListener('click', function () {
+                document.querySelectorAll('.header-nav .nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+
     <main>
         <div class="istanbul-section">
             <div class="istanbul-content">
@@ -52,12 +73,10 @@
     <footer>
         <div class="footer-contacts">
             <a href="tel:+380984284284" class="footer-icon" title="Подзвонити">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/phone.svg" alt="Телефон" />
-                +380984284284
+                📱 +380984284284
             </a>
             <a href="tel:+380914817574" class="footer-icon" title="Подзвонити">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/phone.svg" alt="Телефон" />
-                +380914817574
+                ☎️ +380914817574
             </a>
             <a href="mailto:catalan.ua.md@gmail.com" class="footer-icon" title="Email">
                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="Email" />
