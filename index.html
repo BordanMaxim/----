@@ -147,7 +147,6 @@
         })
             .then(res => res.json())
             .then(res => {
-                console.log('[Ответ]', res);
                 if (res.result === 'success') {
                     document.getElementById('form-success').style.display = "block";
                     this.reset();
@@ -158,15 +157,10 @@
                     alert("Помилка: " + JSON.stringify(res.message));
                 }
             })
-            .catch(err => {
-                console.error('[Fetch error]', err);
+            .catch(() => {
                 alert("Сталася помилка при відправці!");
             });
     });
 </script>
 
 </html>
-
-<!-- AKfycbwBw8MooBWKB82TJZkMXxQGCe8g-N8gUEyDw67L6hvlMiHl5OcVDwWgbtuUL7WRPOnV -->
-
-<!-- https://script.google.com/macros/s/AKfycbwBw8MooBWKB82TJZkMXxQGCe8g-N8gUEyDw67L6hvlMiHl5OcVDwWgbtuUL7WRPOnV/exec -->

@@ -296,7 +296,6 @@ footer {
 @media (max-width: 650px) {
     .container {
         padding: 18px 3vw;
-        margin-top: -14px;
     }
 
     h1 {
@@ -365,7 +364,7 @@ footer {
 }
 
 .greece-section {
-    margin: 48px 0 32px 0;
+    margin: 10px 0 32px 0;
     width: 100%;
 }
 
@@ -435,7 +434,7 @@ footer {
 }
 
 .istanbul-section {
-    margin: 48px 0 32px 0;
+    margin: 10px 0 32px 0;
     width: 100%;
 }
 
