@@ -102,7 +102,6 @@ body {
     margin-top: 20px;
     padding: 32px 100px;
     background: #fff;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
     position: relative;
     z-index: 2;
     border-radius: 18px;
@@ -113,7 +112,6 @@ body {
     margin-top: 20px;
     padding: 32px 500px;
     background: #fff;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
     position: relative;
     z-index: 2;
     border-radius: 18px;
@@ -631,6 +629,7 @@ footer {
 .formAndGalery {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px;
     justify-content: space-between;
     /* max-width: 1200px; */
@@ -644,6 +643,13 @@ footer {
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
     max-width: 540px;
     font-size: 1rem;
+    margin: 10px 300px;
+}
+
+.container-form-greece {
+    background-color: #f3f3f3;
+    margin: 0px 300px;
+    border-radius: 18px;
 }
 
 .contact-form-greece h2 {
@@ -747,22 +753,21 @@ footer {
 }
 
 .photo-gallery {
-    flex: 1 1 65%;
     display: flex;
     flex-direction: column;
+    padding: 0px 300px;
 }
 
-.gallery-top,
-.gallery-bottom {
+.gallery-top {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 10px;
 }
 
 .gallery-top img {
     width: 33.3%;
     height: 100px;
-    width: 100%;
+    width: 155px;
     object-fit: cover;
     border-radius: 10px;
 }

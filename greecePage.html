@@ -31,33 +31,6 @@
     <h2 class="nameHeader">Незабутні враження в Греції</h2>
 
     <div class="formAndGalery">
-        <form class="contact-form-greece" id="tourForm" autocomplete="off">
-            <h2>Залишити заявку</h2>
-            <div class="form-row">
-                <input type="text" name="name" placeholder="Ім'я" required />
-            </div>
-            <div class="form-row">
-                <input type="text" name="surname" placeholder="Прізвище" required />
-            </div>
-            <div class="form-row">
-                <input type="tel" name="phone" placeholder="+380991112233" required pattern="\+?\d{10,15}" />
-            </div>
-            <div class="form-row">
-                <input type="email" name="email" placeholder="Email" required />
-            </div>
-            <div class="form-row">
-                <select name="tour" required>
-                    <option value="">Оберіть тур</option>
-                    <option value="Греція" selected>Греція</option>
-                    <option value="Істамбул">Істамбул</option>
-                </select>
-            </div>
-            <button type="submit">Відправити</button>
-            <div id="form-success" style="display:none;color:#2e7d32;padding:10px 0;text-align:center;">
-                Заявку надіслано!
-            </div>
-        </form>
-
         <div class="photo-gallery">
             <div class="gallery-top">
                 <a href="./src/greece_photo/greece1.jpg" class="gallery-img" target="_blank">
@@ -88,10 +61,34 @@
                     <img src="./src/greece_photo/greece6.jpg" alt="Главное фото" />
                 </a>
             </div>
-
-            <div class="gallery-bottom">
-
-            </div>
+        </div>
+        <div class="container-form-greece">
+            <form class="contact-form-greece" id="tourForm" autocomplete="off">
+                <h2>Залишити заявку</h2>
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Ім'я" required />
+                </div>
+                <div class="form-row">
+                    <input type="text" name="surname" placeholder="Прізвище" required />
+                </div>
+                <div class="form-row">
+                    <input type="tel" name="phone" placeholder="+380991112233" required pattern="\+?\d{10,15}" />
+                </div>
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Email" required />
+                </div>
+                <div class="form-row">
+                    <select name="tour" required disabled>
+                        <option value="">Оберіть тур</option>
+                        <option value="Греція" selected>Греція</option>
+                        <option value="Істамбул">Істамбул</option>
+                    </select>
+                </div>
+                <button type="submit">Відправити</button>
+                <div id="form-success" style="display:none;color:#2e7d32;padding:10px 0;text-align:center;">
+                    Заявку надіслано!
+                </div>
+            </form>
         </div>
     </div>
 
