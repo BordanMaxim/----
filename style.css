@@ -371,3 +371,469 @@ footer {
         height: 32px;
     }
 }
+
+/* ////////////////////////// greece */
+:root {
+    --main-blue: #51acc2;
+    --main-light: #f6f8fa;
+    --accent: #ff9800;
+    --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --radius: 18px;
+    --transition: 0.18s cubic-bezier(.4, 0, .2, 1);
+}
+
+/* Общие стили */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: #fafcff;
+    color: #213255;
+    min-height: 100vh;
+}
+
+.main-header {
+    background: #fff;
+    border-bottom: 1px solid #e3e9f2;
+    box-shadow: 0 2px 8px rgba(30, 60, 100, 0.06);
+    padding: 0 10px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+}
+
+.header-logo img {
+    display: block;
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-size: 1.08rem;
+    color: #213255;
+    text-decoration: none;
+    position: relative;
+    padding: 8px 8px;
+    border-radius: 7px;
+    transition: background 0.14s, color 0.14s;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    background: var(--main-blue);
+    color: #fff;
+}
+
+.nameHeader {
+    text-align: center;
+    color: var(--main-blue);
+    margin-top: 32px;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.formAndGalery {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 36px 0 30px 0;
+    flex-wrap: wrap;
+}
+
+/* Галерея */
+.photo-gallery {
+    flex: 1 1 380px;
+    max-width: 500px;
+    min-width: 260px;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    padding: 16px 12px;
+}
+
+.gallery-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.gallery-img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(34, 44, 78, 0.08);
+    transition: box-shadow .14s;
+    border: 2px solid transparent;
+}
+
+.gallery-img:hover,
+.gallery-img:focus {
+    box-shadow: 0 5px 15px rgba(34, 44, 78, 0.14);
+    border: 2px solid var(--main-blue);
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-main {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-main .gallery-img {
+    width: 100%;
+    height: 240px;
+    max-width: 420px;
+}
+
+/* Модальное окно для фото */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(30, 40, 70, 0.77);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    display: block;
+    margin: 7vh auto 0 auto;
+    max-width: 96vw;
+    max-height: 86vh;
+    border-radius: 15px;
+    box-shadow: 0 5px 32px rgba(44, 66, 130, 0.18);
+}
+
+.close {
+    color: #fff;
+    position: absolute;
+    top: 19px;
+    right: 28px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 90;
+    transition: color .14s;
+}
+
+.close:hover {
+    color: #ffaf51;
+}
+
+/* Форма */
+.container-form-greece {
+    flex: 1 1 310px;
+    max-width: 420px;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form-greece {
+    width: 100%;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    padding: 32px 22px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 180px;
+}
+
+.contact-form-greece h2 {
+    text-align: center;
+    margin-bottom: 14px;
+    color: var(--main-blue);
+}
+
+.form-row {
+    margin-bottom: 7px;
+}
+
+.contact-form-greece input,
+.contact-form-greece select {
+    width: 100%;
+    padding: 11px 12px;
+    font-size: 1.07rem;
+    border-radius: 8px;
+    border: 1px solid #ccd3e0;
+    background: #f8fbff;
+    outline: none;
+    transition: border-color .17s;
+    margin-bottom: 0;
+}
+
+.contact-form-greece input:focus,
+.contact-form-greece select:focus {
+    border-color: var(--main-blue);
+    background: #fff;
+}
+
+.contact-form-greece button {
+    padding: 13px 0;
+    background: var(--main-blue);
+    color: #fff;
+    font-size: 1.13rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 8px;
+    transition: background .14s;
+}
+
+.contact-form-greece button:hover {
+    background: #163580;
+}
+
+/* Контент о Греции */
+.greece-details {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    margin: 40px auto 0 auto;
+    max-width: 880px;
+    padding: 36px 36px 18px 36px;
+}
+
+.container-greece h3,
+.container-greece h4 {
+    color: var(--main-blue);
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+.container-greece p {
+    font-size: 1.08rem;
+    color: #31405d;
+    margin: 10px 0 10px 0;
+}
+
+.container-greece ul {
+    margin-left: 24px;
+    margin-bottom: 10px;
+    color: #234;
+    font-size: 1.07rem;
+}
+
+.container-greece li {
+    margin-bottom: 3px;
+}
+
+/* Табель (таблица расписания) */
+.greece-timetable {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 40px auto 18px auto;
+    font-size: 1.08rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(60, 110, 200, 0.05);
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.greece-timetable th,
+.greece-timetable td {
+    border: 1px solid #d0d0d0;
+    padding: 9px 13px;
+    text-align: center;
+}
+
+.greece-timetable th {
+    background: #f6f8fa;
+    color: #0b3562;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.greece-timetable tr:nth-child(even) td {
+    background: #f4f9ff;
+}
+
+/* Footer */
+footer {
+    background: #fff;
+    border-top: 1px solid #e6e9f3;
+    margin-top: 44px;
+    padding: 28px 0 14px 0;
+    font-size: 1.01rem;
+    color: #18336c;
+    text-align: center;
+}
+
+.footer-contacts {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-icon {
+    text-decoration: none;
+    color: #18336c;
+    font-weight: 500;
+    font-size: 1.12rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color .14s;
+}
+
+.footer-icon:hover {
+    color: var(--main-blue);
+}
+
+.footer-icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+}
+
+/* ----- Адаптив для планшетов ----- */
+@media (max-width: 900px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .formAndGalery {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        margin-top: 24px;
+    }
+
+    .greece-details {
+        padding: 26px 7vw 15px 7vw;
+        margin: 26px auto 0 auto;
+    }
+}
+
+/* ----- Адаптив для мобильных ----- */
+@media (max-width: 650px) {
+    .main-header {
+        padding: 0 2vw;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 14px 0;
+    }
+
+    .nameHeader {
+        font-size: 1.3rem;
+        margin-top: 22px;
+    }
+
+    .photo-gallery {
+        padding: 11px 3vw;
+        max-width: 99vw;
+    }
+
+    .gallery-top {
+        gap: 6px;
+    }
+
+    .gallery-img,
+    .gallery-img img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .gallery-main .gallery-img {
+        height: 160px;
+        max-width: 98vw;
+    }
+
+    .container-form-greece {
+        max-width: 99vw;
+        padding: 0 1vw;
+    }
+
+    .contact-form-greece {
+        padding: 18px 2vw 14px 2vw;
+        max-width: 99vw;
+    }
+
+    .greece-details {
+        padding: 13px 3vw 10px 3vw;
+        font-size: 0.97rem;
+        margin: 12px auto 0 auto;
+        max-width: 99vw;
+    }
+
+    .greece-timetable {
+        width: 99vw;
+        font-size: 0.98rem;
+        margin: 17px 0 17px 0;
+    }
+
+    .greece-timetable th,
+    .greece-timetable td {
+        padding: 6px 2px;
+        font-size: 0.91rem;
+    }
+}
+
+/* ----- Адаптив для маленьких экранов ----- */
+@media (max-width: 430px) {
+
+    .main-header,
+    .container-form-greece,
+    .greece-details {
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
+    .nameHeader {
+        font-size: 1.09rem;
+    }
+
+    .footer-contacts {
+        flex-direction: column;
+        gap: 9px;
+    }
+}
