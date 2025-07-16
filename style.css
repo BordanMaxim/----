@@ -590,7 +590,7 @@ body {
 
 .contact-form-greece input,
 .contact-form-greece select {
-    width: 100%;
+    /* width: 100%; */
     padding: 11px 12px;
     font-size: 1.07rem;
     border-radius: 8px;
@@ -780,8 +780,8 @@ footer {
 
     .gallery-img,
     .gallery-img img {
-        width: 64px;
-        height: 64px;
+        /* width: 64px;
+        height: 64px; */
     }
 
     .gallery-main .gallery-img {
