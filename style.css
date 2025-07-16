@@ -108,6 +108,17 @@ body {
     border-radius: 18px;
 }
 
+.container-greece {
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 32px 500px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    position: relative;
+    z-index: 2;
+    border-radius: 18px;
+}
+
 h1 {
     margin-top: 0;
     font-size: 2.2rem;
@@ -832,6 +843,7 @@ footer {
     font-weight: bold;
     cursor: pointer;
 }
+
 .nameHeader {
     text-align: center;
     padding-bottom: 10px;
