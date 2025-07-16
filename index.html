@@ -204,5 +204,18 @@
         });
     });
 </script>
+<script>
+    document.querySelectorAll('.cards-row .card').forEach((card, idx) => {
+        card.style.cursor = "pointer";
+        card.addEventListener('click', () => {
+            if (idx === 0) {
+                window.location.href = 'greecePage.html';
+            } else if (idx === 1) {
+                window.location.href = 'stambulPage.html';
+            }
+        });
+    });
+</script>
+
 
 </html>
