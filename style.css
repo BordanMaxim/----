@@ -796,7 +796,7 @@ footer {
 
     .contact-form-greece {
         padding: 18px 2vw 14px 2vw;
-        max-width: 99vw;
+        width: 350px;
     }
 
     .greece-details {
@@ -816,6 +816,19 @@ footer {
     .greece-timetable td {
         padding: 6px 2px;
         font-size: 0.91rem;
+    }
+
+    .contact-form-greece input,
+    .contact-form-greece select {
+        width: 92%;
+        padding: 11px 12px;
+        font-size: 1.07rem;
+        border-radius: 8px;
+        border: 1px solid #ccd3e0;
+        background: #f8fbff;
+        outline: none;
+        transition: border-color .17s;
+        margin-bottom: 0;
     }
 }
 
