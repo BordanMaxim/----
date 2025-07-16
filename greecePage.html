@@ -27,7 +27,8 @@
             </nav>
         </div>
     </header>
-    <h2>Незабутні враження в Греції</h2>
+
+    <h2 class="nameHeader">Незабутні враження в Греції</h2>
 
     <div class="formAndGalery">
         <form class="contact-form-greece" id="tourForm" autocomplete="off">
@@ -59,20 +60,37 @@
 
         <div class="photo-gallery">
             <div class="gallery-top">
-                <img src="./src/greece_photo/greece1.jpg" alt="Фото 1" />
-                <img src="./src/greece_photo/greece2.jpg" alt="Фото 2" />
-                <img src="./src/greece_photo/greece3.jpg" alt="Фото 3" />
-                <img src="./src/greece_photo/greece4.jpg" alt="Фото 4" />
-                <img src="./src/greece_photo/greece5.jpg" alt="Фото 5" />
+                <a href="./src/greece_photo/greece1.jpg" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece1.jpg" alt="Фото 1" />
+                </a>
+                <a href="./src/greece_photo/greece2.jpg" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece2.jpg" alt="Фото 2" />
+                </a>
+                <a href="./src/greece_photo/greece3.jpg" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece3.jpg" alt="Фото 3" />
+                </a>
+                <a href="./src/greece_photo/greece4.jpg" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece4.jpg" alt="Фото 4" />
+                </a>
+                <a href="./src/greece_photo/greece7.png" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece7.png" alt="Фото 6" />
+                </a>
+                <a href="./src/greece_photo/greece8.png" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece8.png" alt="Фото 7" />
+                </a>
+                <a href="./src/greece_photo/greece5.jpg" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece5.jpg" alt="Фото 5" />
+                </a>
             </div>
 
             <div class="gallery-main">
-                <img src="./src/greece_photo/greece6.jpg" alt="Главное фото" />
+                <a href="./src/greece_photo/greece6.jpg" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece6.jpg" alt="Главное фото" />
+                </a>
             </div>
 
             <div class="gallery-bottom">
-                <img src="./src/greece_photo/greece7.png" alt="Фото 6" />
-                <img src="./src/greece_photo/greece8.png" alt="Фото 7" />
+
             </div>
         </div>
     </div>
@@ -165,6 +183,10 @@
             © 2025 Catalan Travel. Всі права захищені.
         </div>
     </footer>
+    <div id="imageModal" class="modal" style="display:none;">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
 </body>
 
 <script>
@@ -214,5 +236,24 @@
             });
     });
 </script>
+<script>
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".photo-gallery a").forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            modalImg.src = this.href;
+        });
+    });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    modal.onclick = e => {
+        if (e.target === modal) modal.style.display = "none";
+    };
+</script>
+
 
 </html>
