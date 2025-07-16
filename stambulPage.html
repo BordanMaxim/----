@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Стамбул — Catalan Travel</title>
+    <title>Греція — Catalan Travel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -28,26 +28,142 @@
         </div>
     </header>
 
-    <main>
-        <div class="istanbul-section">
-            <div class="istanbul-content">
-                <div class="istanbul-text">
-                    <h1>Стамбул — місто двох континентів</h1>
-                    <p>
-                        Стамбул — унікальне місто, де Європа зустрічається з Азією.<br>
-                        Тут витає дух історії, величні мечеті сусідять із сучасними районами, а запахи східних прянощів
-                        супроводжують на кожному кроці.<br>
-                        Відвідайте легендарну Айя-Софію, прогуляйтеся Гранд-базаром, насолодіться видом на Босфор та
-                        відчуйте справжній колорит Туреччини у Стамбулі!
-                    </p>
-                </div>
-                <div class="istanbul-img">
-                    <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80"
-                        alt="Стамбул, мечеть і Босфор">
-                </div>
+    <h2 class="nameHeader">Незабутні враження в Греції</h2>
+
+    <div class="formAndGalery">
+        <div class="photo-gallery">
+            <div class="gallery-top">
+                <a href="./src/greece_photo/greece1.jpg" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece1.jpg" alt="Фото 1" />
+                </a>
+                <a href="./src/greece_photo/greece2.jpg" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece2.jpg" alt="Фото 2" />
+                </a>
+                <a href="./src/greece_photo/greece3.jpg" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece3.jpg" alt="Фото 3" />
+                </a>
+                <a href="./src/greece_photo/greece4.jpg" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece4.jpg" alt="Фото 4" />
+                </a>
+                <a href="./src/greece_photo/greece7.png" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece7.png" alt="Фото 6" />
+                </a>
+                <a href="./src/greece_photo/greece8.png" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece8.png" alt="Фото 7" />
+                </a>
+                <a href="./src/greece_photo/greece5.jpg" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece5.jpg" alt="Фото 5" />
+                </a>
+            </div>
+
+            <div class="gallery-main">
+                <a href="./src/greece_photo/greece6.jpg" class="gallery-img" target="_blank">
+                    <img src="./src/greece_photo/greece6.jpg" alt="Главное фото" />
+                </a>
             </div>
         </div>
-    </main>
+        <div class="container-form-greece">
+            <form class="contact-form-greece" id="tourForm" autocomplete="off">
+                <h2>Залишити заявку</h2>
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Ім'я" required />
+                </div>
+                <div class="form-row">
+                    <input type="text" name="surname" placeholder="Прізвище" required />
+                </div>
+                <div class="form-row">
+                    <input type="tel" name="phone" placeholder="+380991112233" required pattern="\+?\d{10,15}" />
+                </div>
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Email" required />
+                </div>
+                <div class="form-row">
+                    <select name="tour" required disabled>
+                        <option value="">Оберіть тур</option>
+                        <option value="Греція" selected>Греція</option>
+                        <option value="Істамбул">Істамбул</option>
+                    </select>
+                </div>
+                <button type="submit">Відправити</button>
+                <div id="form-success" style="display:none;color:#2e7d32;padding:10px 0;text-align:center;">
+                    Заявку надіслано!
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="greece-details">
+        <div class="container-greece">
+            <p>
+                Ти чула про гору Олімп — дім міфічних богів Давньої Греції? Або про "ПАРЯЧІ" монастирі Метеори — другий
+                за значенням центр православного чернецтва після Святої Гори Афон?
+                <strong>Дізнайся більше про незабутні екскурсії прямо зараз!</strong>
+            </p>
+
+            <h3>Чому варто обрати саме нас?</h3>
+            <ul>
+                <li>🔹 Найкращі пропозиції на ринку з чудовим співвідношенням ціни та якості</li>
+                <li>🔹 Понад 300 напрямків на будь-який смак і бюджет</li>
+                <li>🔹 Понад 150 000 вдячних клієнтів</li>
+                <li>🔹 Більше 15 років успішної роботи на туристичному ринку</li>
+                <li>🔹 Команда професіоналів розробить ідеальний маршрут для вашої подорожі</li>
+                <li>🔹 Консультації 24/7</li>
+            </ul>
+
+            <h3>Греція для всіх</h3>
+            <p>
+                Це унікальна пропозиція для незабутнього відпочинку з чудовим співвідношенням ціни та якості. Курорт
+                Лептокарія — це мальовничі пейзажі та пляжі, відзначені "Blue Flag".
+            </p>
+
+            <h4>Проживання: Balkan Hellas (3*)</h4>
+            <p>
+                Готель розташований у центрі Лептокарії, всього за 250 м від пляжу. Має внутрішній дворик, басейн із
+                шезлонгами та парасолями — безкоштовно для гостей.
+            </p>
+            <p>
+                Номери обладнані міні-кухнями, що дозволяє самостійно готувати, економлячи час і кошти.
+            </p>
+            <p>
+                Курорт має м’який клімат, купальний сезон — з травня по жовтень, а сонце світить майже весь рік.
+            </p>
+            <p>
+                Поруч із готелем — муніципальний парк із дитячим майданчиком, ідеальний для сімейного відпочинку.
+            </p>
+            <p>
+                Готель оновлений у 2020 році, має 2 поверхи та 48 номерів.
+            </p>
+
+            <h4>Багаж</h4>
+            <ul>
+                <li>🧳 1 валіза до 20 кг + ручна поклажа до 6 кг — <strong>безкоштовно</strong></li>
+                <li>📦 Додатковий багаж — оплата гіду при посадці</li>
+            </ul>
+
+            <h4>У вартість входить:</h4>
+            <ul>
+                <li>🚍 Трансфер в обидві сторони</li>
+                <li>🏨 Проживання 7 ночей / 8 днів</li>
+                <li>👨‍💼 Супровід гіда</li>
+                <li>🩺 Медична страховка</li>
+            </ul>
+
+            <h4>Додатково оплачується:</h4>
+            <ul>
+                <li>💶 Податок на стійкість: <strong>3 € / ніч / номер</strong> — сплачується на рецепції (обов’язково)
+                </li>
+                <li>❄️ Кондиціонер: <strong>5 € / ніч</strong> — на рецепції, за запитом</li>
+            </ul>
+
+            <h4>Харчування:</h4>
+            <ul>
+                <li>🍴 RO — без харчування</li>
+                <li>🥐🍽️ HB — сніданок + вечеря</li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="timetable-container" style="overflow-x:auto; margin-top:40px"></div>
 
     <footer>
         <div class="footer-contacts">
@@ -66,6 +182,11 @@
             © 2025 Catalan Travel. Всі права захищені.
         </div>
     </footer>
+    <div id="imageModal" class="modal" style="display:none;">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
 </body>
 
 <script>
@@ -86,5 +207,120 @@
         });
     });
 </script>
+<script>
+    document.getElementById('tourForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const formData = new URLSearchParams(new FormData(this));
+
+        fetch('https://script.google.com/macros/s/AKfycbybIJ-Q_YIZt00ZFrS4fnBYRn9bZnIubQT7vRzOES_0AGUw6OVk5qaXxuGm8nXrk8cV/exec', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: formData
+        })
+            .then(res => res.json())
+            .then(res => {
+                if (res.result === 'success') {
+                    document.getElementById('form-success').style.display = "block";
+                    this.reset();
+                    setTimeout(() => {
+                        document.getElementById('form-success').style.display = "none";
+                    }, 3000);
+                } else {
+                    alert("Помилка: " + JSON.stringify(res.message));
+                }
+            })
+            .catch(() => {
+                alert("Сталася помилка при відправці!");
+            });
+    });
+</script>
+<script>
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".photo-gallery a").forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            modalImg.src = this.href;
+        });
+    });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    modal.onclick = e => {
+        if (e.target === modal) modal.style.display = "none";
+    };
+</script>
+<script>
+    const TABLE_CONTAINER_ID = "timetable-container";
+    const SHEET_URL = "https://sheets.googleapis.com/v4/spreadsheets/17lg4gBmp0Ij4aZ20-_TWOUyTASudrvThz1ixBE_8Vx4/values/Timetable%20Lvov!A1:Z1000?key=AIzaSyBR6dfBERIxZ2Wb--FmFB2DNmrGbcSVJ68";
+
+    async function fetchTimetable() {
+        try {
+            const response = await fetch(SHEET_URL);
+            const data = await response.json();
+            if (!data.values || data.values.length === 0) {
+                document.getElementById(TABLE_CONTAINER_ID).innerHTML = "<p>Дані відсутні</p>";
+                return;
+            }
+            renderTable(data.values);
+        } catch (e) {
+            document.getElementById(TABLE_CONTAINER_ID).innerHTML = "<p>Не вдалося завантажити табель</p>";
+        }
+    }
+
+    function renderTable(rows) {
+        let table = "<table class='greece-timetable'><thead><tr>";
+        // Header
+        rows[0].forEach(cell => {
+            table += `<th>${cell}</th>`;
+        });
+        table += "</tr></thead><tbody>";
+        // Data
+        for (let i = 1; i < rows.length; i++) {
+            table += "<tr>";
+            rows[i].forEach(cell => {
+                table += `<td>${cell}</td>`;
+            });
+            table += "</tr>";
+        }
+        table += "</tbody></table>";
+        document.getElementById(TABLE_CONTAINER_ID).innerHTML = table;
+    }
+
+    // Стили для таблицы (можно вынести в style.css)
+    const timetableStyles = `
+  <style>
+    .greece-timetable {
+      width: 80%;
+      border-collapse: collapse;
+      background: #fff;
+      margin: 0 auto;
+      font-size: 1em;
+    }
+    .greece-timetable th, .greece-timetable td {
+      border: 1px solid #d0d0d0;
+      padding: 7px 12px;
+      text-align: center;
+    }
+    .greece-timetable th {
+      background: #f6f8fa;
+      color: #0b3562;
+      font-weight: bold;
+    }
+    .greece-timetable tr:nth-child(even) td {
+      background: #f2f8ff;
+    }
+  </style>
+`;
+    document.head.insertAdjacentHTML("beforeend", timetableStyles);
+
+    // Запускаем при загрузке
+    fetchTimetable();
+</script>
+
 
 </html>
