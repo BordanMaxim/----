@@ -184,6 +184,8 @@
         <span class="close">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
+    <div id="timetable-container" style="overflow-x:auto; margin-top:40px"></div>
+
 </body>
 
 <script>
@@ -250,6 +252,73 @@
     modal.onclick = e => {
         if (e.target === modal) modal.style.display = "none";
     };
+</script>
+<script>
+    const TABLE_CONTAINER_ID = "timetable-container";
+    const SHEET_URL = "https://sheets.googleapis.com/v4/spreadsheets/17lg4gBmp0Ij4aZ20-_TWOUyTASudrvThz1ixBE_8Vx4/values/Timetable%20Lvov!A1:Z1000?key=AIzaSyBR6dfBERIxZ2Wb--FmFB2DNmrGbcSVJ68";
+
+    async function fetchTimetable() {
+        try {
+            const response = await fetch(SHEET_URL);
+            const data = await response.json();
+            if (!data.values || data.values.length === 0) {
+                document.getElementById(TABLE_CONTAINER_ID).innerHTML = "<p>Дані відсутні</p>";
+                return;
+            }
+            renderTable(data.values);
+        } catch (e) {
+            document.getElementById(TABLE_CONTAINER_ID).innerHTML = "<p>Не вдалося завантажити табель</p>";
+        }
+    }
+
+    function renderTable(rows) {
+        let table = "<table class='greece-timetable'><thead><tr>";
+        // Header
+        rows[0].forEach(cell => {
+            table += `<th>${cell}</th>`;
+        });
+        table += "</tr></thead><tbody>";
+        // Data
+        for (let i = 1; i < rows.length; i++) {
+            table += "<tr>";
+            rows[i].forEach(cell => {
+                table += `<td>${cell}</td>`;
+            });
+            table += "</tr>";
+        }
+        table += "</tbody></table>";
+        document.getElementById(TABLE_CONTAINER_ID).innerHTML = table;
+    }
+
+    // Стили для таблицы (можно вынести в style.css)
+    const timetableStyles = `
+  <style>
+    .greece-timetable {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      margin: 0 auto;
+      font-size: 1em;
+    }
+    .greece-timetable th, .greece-timetable td {
+      border: 1px solid #d0d0d0;
+      padding: 7px 12px;
+      text-align: center;
+    }
+    .greece-timetable th {
+      background: #f6f8fa;
+      color: #0b3562;
+      font-weight: bold;
+    }
+    .greece-timetable tr:nth-child(even) td {
+      background: #f2f8ff;
+    }
+  </style>
+`;
+    document.head.insertAdjacentHTML("beforeend", timetableStyles);
+
+    // Запускаем при загрузке
+    fetchTimetable();
 </script>
 
 
