@@ -483,7 +483,7 @@ body {
 
 .gallery-img {
     display: block;
-    width: 80px;
+    width: 23%;
     height: 80px;
     overflow: hidden;
     border-radius: 12px;
@@ -513,7 +513,7 @@ body {
 .gallery-main .gallery-img {
     width: 100%;
     height: 240px;
-    max-width: 420px;
+    /* max-width: 420px; */
 }
 
 /* Модальное окно для фото */
@@ -778,10 +778,9 @@ footer {
         gap: 6px;
     }
 
-    .gallery-img,
-    .gallery-img img {
-        /* width: 64px;
-        height: 64px; */
+    .gallery-img {
+        width: 92px;
+        height: 64px;
     }
 
     .gallery-main .gallery-img {
