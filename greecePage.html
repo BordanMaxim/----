@@ -291,32 +291,8 @@
         document.getElementById(TABLE_CONTAINER_ID).innerHTML = table;
     }
 
-    // Стили для таблицы (можно вынести в style.css)
-    const timetableStyles = `
-  <style>
-    .greece-timetable {
-      width: 70%;
-      border-collapse: collapse;
-      background: #fff;
-      margin: 0 auto;
-      font-size: 1em;
-    }
-    .greece-timetable th, .greece-timetable td {
-      border: 1px solid #d0d0d0;
-      padding: 7px 12px;
-      text-align: center;
-    }
-    .greece-timetable th {
-      background: #f6f8fa;
-      color: #0b3562;
-      font-weight: bold;
-    }
-    .greece-timetable tr:nth-child(even) td {
-      background: #f2f8ff;
-    }
-  </style>
-`;
-    document.head.insertAdjacentHTML("beforeend", timetableStyles);
+    // Просто убери весь блок timetableStyles!
+    // Теперь таблица будет оформляться через твой style.css
 
     // Запускаем при загрузке
     fetchTimetable();

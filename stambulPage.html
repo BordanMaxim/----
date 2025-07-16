@@ -80,13 +80,13 @@
                 <div class="form-row">
                     <select name="tour" required disabled>
                         <option value="">Оберіть тур</option>
-                        <option value="Греція" selected>Греція</option>
-                        <option value="Істамбул">Істамбул</option>
+                        <option value="Греція">Греція</option>
+                        <option value="Істамбул" selected>Істамбул</option>
                     </select>
                 </div>
                 <button type="submit">Відправити</button>
                 <div id="form-success" style="display:none;color:#2e7d32;padding:10px 0;text-align:center;">
-                    Заявку надіслано!
+                    Заявку надіслано! Ми скоро з вами зв’яжемося.
                 </div>
             </form>
         </div>
@@ -291,32 +291,7 @@
         document.getElementById(TABLE_CONTAINER_ID).innerHTML = table;
     }
 
-    // Стили для таблицы (можно вынести в style.css)
-    const timetableStyles = `
-  <style>
-    .greece-timetable {
-      width: 70%;
-      border-collapse: collapse;
-      background: #fff;
-      margin: 0 auto;
-      font-size: 1em;
-    }
-    .greece-timetable th, .greece-timetable td {
-      border: 1px solid #d0d0d0;
-      padding: 7px 12px;
-      text-align: center;
-    }
-    .greece-timetable th {
-      background: #f6f8fa;
-      color: #0b3562;
-      font-weight: bold;
-    }
-    .greece-timetable tr:nth-child(even) td {
-      background: #f2f8ff;
-    }
-  </style>
-`;
-    document.head.insertAdjacentHTML("beforeend", timetableStyles);
+    // Удаляем весь timetableStyles — теперь все стили только в style.css!
 
     // Запускаем при загрузке
     fetchTimetable();
