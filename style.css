@@ -969,3 +969,47 @@ body {
         gap: 14px 0;
     }
 }
+
+@media (max-width: 850px) {
+    .container-sity {
+        gap: 20px;
+    }
+
+    .container-lvov,
+    .container-odesa {
+        min-width: 180px;
+        padding: 13px 11px 11px 11px;
+        max-width: 99vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .container-sity {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+
+    .container-lvov,
+    .container-odesa {
+        width: 95vw;
+        min-width: unset;
+        max-width: 99vw;
+        align-items: stretch;
+        padding: 12px 10px 10px 10px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .footer-contacts a,
+    .footer-contacts {
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 22px 0 7px 0;
+        font-size: 1em;
+    }
+}
