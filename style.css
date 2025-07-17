@@ -852,3 +852,29 @@ footer {
         gap: 9px;
     }
 }
+
+.booking-btn {
+    background: linear-gradient(90deg, #1565c0, #4fc3f7);
+    color: #fff;
+    padding: 14px 44px;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 14px rgba(13, 57, 132, 0.13);
+    transition: background 0.2s, transform 0.13s;
+}
+
+.booking-btn:hover {
+    background: linear-gradient(90deg, #1976d2, #29b6f6);
+    transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width:600px) {
+    .booking-btn {
+        width: 90vw;
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+}

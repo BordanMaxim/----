@@ -167,6 +167,10 @@
 
     <div id="timetable-container" style="overflow-x:auto; margin-top:40px"></div>
 
+    <div style="text-align:center; margin: 30px 0;">
+        <button id="scrollToForm" class="booking-btn">Забронювати</button>
+    </div>
+
     <footer>
         <div class="footer-contacts">
             <a href="tel:+380984284284" class="footer-icon" title="Подзвонити">
@@ -298,6 +302,18 @@
 
     // Запускаем при загрузке
     fetchTimetable();
+</script>
+<script>
+    document.getElementById('scrollToForm').addEventListener('click', function () {
+        // Прокрутка к форме бронирования (id = tourForm)
+        const form = document.getElementById('tourForm');
+        if (form) {
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Фокусируемся на первом поле для удобства
+            const firstInput = form.querySelector('input,select,textarea');
+            if (firstInput) setTimeout(() => firstInput.focus(), 500);
+        }
+    });
 </script>
 
 

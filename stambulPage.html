@@ -167,6 +167,10 @@
 
     <div id="timetable-container" style="overflow-x:auto; margin-top:40px"></div>
 
+    <div style="text-align:center; margin: 30px 0;">
+        <button id="scrollToForm" class="booking-btn">Забронювати</button>
+    </div>
+
     <footer>
         <div class="footer-contacts">
             <a href="tel:+380984284284" class="footer-icon" title="Подзвонити">
@@ -276,12 +280,10 @@
 
     function renderTable(rows) {
         let table = "<table class='greece-timetable'><thead><tr>";
-        // Header
         rows[0].forEach(cell => {
             table += `<th>${cell}</th>`;
         });
         table += "</tr></thead><tbody>";
-        // Data
         for (let i = 1; i < rows.length; i++) {
             table += "<tr>";
             rows[i].forEach(cell => {
@@ -292,11 +294,17 @@
         table += "</tbody></table>";
         document.getElementById(TABLE_CONTAINER_ID).innerHTML = table;
     }
-
-    // Удаляем весь timetableStyles — теперь все стили только в style.css!
-
-    // Запускаем при загрузке
     fetchTimetable();
+</script>
+<script>
+    document.getElementById('scrollToForm').addEventListener('click', function () {
+        const form = document.getElementById('tourForm');
+        if (form) {
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const firstInput = form.querySelector('input,select,textarea');
+            if (firstInput) setTimeout(() => firstInput.focus(), 500);
+        }
+    });
 </script>
 
 
