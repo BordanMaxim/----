@@ -111,6 +111,7 @@ body {
 .tour-block {
     padding: 0 18px 16px 18px;
     font-size: 1.07rem;
+    text-align: left;
 }
 
 .tour-section {
