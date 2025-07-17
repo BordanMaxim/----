@@ -207,7 +207,7 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 24px;
-    margin: 32px 0 0 0;
+    margin: 20px 0 10px 0;
 }
 
 .social-icon img {
@@ -228,10 +228,17 @@ footer {
     background: #fff;
     border-top: 1px solid #e6e9f3;
     margin-top: 40px;
-    padding: 28px 0 14px 0;
+    padding: 10px 0;
     font-size: 1.01rem;
     color: #18336c;
     text-align: center;
+}
+
+.container-sity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 40px;
 }
 
 .footer-contacts {
@@ -690,17 +697,6 @@ body {
 
 .greece-timetable tr:nth-child(even) td {
     background: #f4f9ff;
-}
-
-/* Footer */
-footer {
-    background: #fff;
-    border-top: 1px solid #e6e9f3;
-    margin-top: 44px;
-    padding: 28px 0 14px 0;
-    font-size: 1.01rem;
-    color: #18336c;
-    text-align: center;
 }
 
 .footer-contacts {
