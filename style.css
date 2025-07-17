@@ -488,7 +488,12 @@ body {
 .gallery-main .gallery-img {
     width: 100%;
     height: 240px;
+
     /* max-width: 420px; */
+}
+
+.gallery-main {
+    margin-bottom: 10px;
 }
 
 /* Модальное окно для фото */
