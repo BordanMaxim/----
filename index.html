@@ -218,36 +218,6 @@
 </body>
 
 <script>
-    document.getElementById('tourForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        const formData = new URLSearchParams(new FormData(this));
-
-        fetch('https://script.google.com/macros/s/AKfycbybIJ-Q_YIZt00ZFrS4fnBYRn9bZnIubQT7vRzOES_0AGUw6OVk5qaXxuGm8nXrk8cV/exec', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: formData
-        })
-            .then(res => res.json())
-            .then(res => {
-                if (res.result === 'success') {
-                    document.getElementById('form-success').style.display = "block";
-                    this.reset();
-                    setTimeout(() => {
-                        document.getElementById('form-success').style.display = "none";
-                    }, 3000);
-                } else {
-                    alert("Помилка: " + JSON.stringify(res.message));
-                }
-            })
-            .catch(() => {
-                alert("Сталася помилка при відправці!");
-            });
-    });
-</script>
-
-<script>
     const current = window.location.pathname.split('/').pop();
     document.querySelectorAll('.header-nav .nav-link').forEach(link => {
         if (link.getAttribute('href').startsWith('#')) return;
