@@ -992,7 +992,7 @@ body {
 .container-istanbul {
     max-width: 980px;
     margin: 0 auto;
-    padding: 0 18px;
+    padding: 36px;
     background: rgba(255, 255, 255, 0.96);
     border-radius: 24px;
     box-shadow: 0 4px 24px rgba(60, 120, 180, 0.06), 0 1.5px 8px rgba(44, 60, 90, 0.03);
