@@ -52,16 +52,6 @@ body {
     gap: 20px;
 }
 
-.nav-link {
-    font-size: 1.08rem;
-    color: #213255;
-    text-decoration: none;
-    position: relative;
-    padding: 8px 8px;
-    border-radius: 7px;
-    transition: background 0.14s, color 0.14s;
-}
-
 .nav-link.active,
 .nav-link:hover {
     background: var(--main-blue);
@@ -403,13 +393,14 @@ body {
 }
 
 .nav-link {
-    font-size: 1.01rem;
+    font-size: 1.08rem;
     color: #213255;
     text-decoration: none;
     position: relative;
     padding: 4px;
     border-radius: 7px;
     transition: background 0.14s, color 0.14s;
+    font-size: bold;
 }
 
 .nav-link.active,
@@ -721,6 +712,16 @@ body {
 @media (max-width: 650px) {
     .main-header {
         padding: 0 2vw;
+    }
+
+    .nav-link {
+        font-size: 1.01rem;
+        color: #213255;
+        text-decoration: none;
+        position: relative;
+        padding: 4px;
+        border-radius: 7px;
+        transition: background 0.14s, color 0.14s;
     }
 
     .header-inner {
