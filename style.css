@@ -1171,7 +1171,6 @@ body {
     box-shadow: 0 4px 24px rgba(0, 40, 80, 0.13), 0 1.5px 7px rgba(44, 60, 90, 0.09);
     object-fit: cover;
     background: #eef5f8;
-    /* красивый плавный появление */
     opacity: 0.98;
 }
 
