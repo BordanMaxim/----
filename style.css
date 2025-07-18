@@ -1150,7 +1150,7 @@ body {
 
 @media (max-width: 440px) {
     .container-istanbul {
-        padding: 0 2vw;
+        padding: 2vw 2vw;
     }
 
     .istanbul-details .container-istanbul>div[style*="margin-bottom"] {
